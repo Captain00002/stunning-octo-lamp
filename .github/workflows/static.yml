@@ -36,7 +36,967 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Up<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier 3 City Business Opportunities Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#e5d1cb',
+                            500: '#c2593f',
+                            600: '#a8462f',
+                            700: '#8c3521',
+                            900: '#47180e',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        sage: {
+                            500: '#4e7d63',
+                            600: '#3b614c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfbf7;
+            color: #2d3748;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .tab-btn.active {
+            border-bottom: 3px solid #c2593f;
+            color: #c2593f;
+            font-weight: 700;
+        }
+        .filter-btn.active {
+            background-color: #c2593f;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased leading-relaxed">
+
+    <!-- Chosen Palette: Warm Editorial / Balanced Neutral Archetype (Warm Alabaster background `#FDFBF7`, Slate Navy primary `#1E293B`, Terracotta accent `#C2593F`, Sage secondary `#4E7D63`, Sand muted `#EAE5D9`, Dark Slate text `#2D3748`) -->
+    
+    <!-- Application Structure Plan: The SPA transforms the lengthy strategic analysis into an intuitive, section-based decision portal. 1. Header & Hero: Establishes context and key stats (MSMEs, Internet Growth, Setup Cost Arbitrage). 2. Tier Dynamics & Cost Matrix: Visualizes differences between Tier 1, 2, and 3 using Chart.js to immediately illustrate the cost arbitrage thesis. 3. Growth Drivers & Govt Support: Interactive tabs for economic, demographic, infrastructure, and policy drivers alongside a searchable table of government schemes. 4. Business Opportunities Matrix: A filterable catalog of all 12 key business ideas with interactive detail expansion and feasibility/payback visualization. 5. Risk & Mitigation Framework: Accordion matrix connecting infrastructure, skills, marketing, and capital gaps to practical solutions. 6. Success Stories Showcase: Interactive cards highlighting real-world companies born in non-metros. 7. Venture Suitability Calculator: An interactive diagnostic tool allowing prospective founders to filter sectors by budget, domain, and risk preference. Why? This non-linear, task-oriented layout lets entrepreneurs, investors, and policymakers directly jump to actionable intelligence without losing broad context. -->
+
+    <!-- Visualization & Content Choices: 
+        1. Cost & Operational Comparison (Tier 1 vs 2 vs 3) -> Goal: Compare -> Interactive Grouped Bar Chart (Chart.js) -> Toggle metrics (Rental, Setup Cost, YoY Internet Growth) -> Justification: Visualizes the strong economic arbitrage thesis. 
+        2. Business Models Payback vs Capital -> Goal: Relationships -> Scatter / Bubble Matrix Chart (Chart.js) -> Hover tooltips for model details -> Justification: Helps founders quickly identify fast-payback low-capital opportunities. 
+        3. Government Schemes Table -> Goal: Organize -> Interactive Search & Category Filter -> Justification: Makes dense policy data easily navigable. 
+        4. Success Story Cards -> Goal: Inform & Inspire -> Grid with Tag Filters -> Justification: Shows practical proof-of-concept for non-metro ventures. 
+        5. Interactive Business Idea Matrix -> Goal: Filter & Explore -> Multi-tag category dynamic JS rendering -> Justification: Provides tailored views based on user interest. 
+        Library: Chart.js (Canvas), Vanilla JS for state and event handling. NO SVG used. NO Mermaid JS used. -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <header class="sticky top-0 z-50 bg-[#fdfbf7]/95 backdrop-blur border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-black text-brand-500 tracking-tight">BHARAT<span class="text-navy-800">SCOPE</span></span>
+                    <span class="hidden sm:inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full bg-brand-100 text-brand-700">Tier 3 Strategy Portal</span>
+                </div>
+                <nav class="hidden md:flex space-x-6 text-sm font-medium text-stone-600">
+                    <a href="#overview" class="hover:text-brand-500 transition-colors">Overview</a>
+                    <a href="#comparison" class="hover:text-brand-500 transition-colors">Tier Metrics</a>
+                    <a href="#drivers" class="hover:text-brand-500 transition-colors">Growth Drivers</a>
+                    <a href="#opportunities" class="hover:text-brand-500 transition-colors">Business Ideas</a>
+                    <a href="#challenges" class="hover:text-brand-500 transition-colors">Risks & Mitigation</a>
+                    <a href="#success-stories" class="hover:text-brand-500 transition-colors">Success Stories</a>
+                    <a href="#calculator" class="hover:text-brand-500 transition-colors">Venture Calculator</a>
+                </nav>
+                <a href="#calculator" class="bg-brand-500 hover:bg-brand-600 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-sm">
+                    Assess Opportunity
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <section id="overview" class="space-y-8">
+            <div class="bg-navy-800 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+                <div class="max-w-3xl space-y-4">
+                    <span class="inline-block text-xs font-bold uppercase tracking-wider bg-brand-500 text-white px-3 py-1 rounded-full">Strategic Analysis Report</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                        Unlocking Opportunities in India's Tier 3 Cities
+                    </h1>
+                    <p class="text-stone-300 text-base md:text-lg leading-relaxed">
+                        Tier 3 cities are rapidly emerging as pivotal economic frontiers. Driven by cost arbitrage, dynamic demographic shifts, accelerating digital connectivity, and aggressive infrastructure investments, these urban hubs are transforming from passive consumer markets into active engines of innovation and production.
+                    </p>
+                </div>
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-700">
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="text-2xl md:text-3xl font-black text-brand-500">51%+</div>
+                        <div class="text-xs text-stone-300 mt-1">India's Registered MSMEs in Tier 2/3</div>
+                    </div>
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="text-2xl md:text-3xl font-black text-brand-500">15% YoY</div>
+                        <div class="text-xs text-stone-300 mt-1">Internet Penetration Growth</div>
+                    </div>
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="text-2xl md:text-3xl font-black text-brand-500">55%+</div>
+                        <div class="text-xs text-stone-300 mt-1">E-Commerce Orders from Non-Metros</div>
+                    </div>
+                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="text-2xl md:text-3xl font-black text-brand-500">₹20-40</div>
+                        <div class="text-xs text-stone-300 mt-1">Office Rental / sq ft (vs ₹100-150 Metro)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4">
+                <h2 class="text-xl font-bold text-navy-800">Understanding Tier Definitions & Scope</h2>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    While the <strong>Reserve Bank of India (RBI)</strong> formally defines Tier 3 cities based on population sizes between <strong>20,000 and 49,999</strong> (2001 Census framework), standard business and investment literature adopts a broader operational view. In strategic discussions, "Tier 3" often encompasses emerging urban centers with populations ranging from <strong>100,000 up to 1 million</strong> (such as Amritsar, Bhubaneswar, Visakhapatnam, and Guwahati). This interactive report embraces both official standards and practical business realities to analyze growth dynamics across emerging Indian urban markets.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-stone-600">
+                        <thead class="bg-stone-100 text-navy-800 font-semibold uppercase">
+                            <tr>
+                                <th class="p-3 rounded-l-lg">Tier</th>
+                                <th class="p-3">RBI Population Benchmark</th>
+                                <th class="p-3 rounded-r-lg">Business Ecosystem Reality</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">Tier 1</td>
+                                <td class="p-3">100,000 and above</td>
+                                <td class="p-3">Metropolitan centers, high operational costs, market saturation.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">Tier 2</td>
+                                <td class="p-3">50,000 to 99,999</td>
+                                <td class="p-3">Regional commercial centers, moderate competition, high growth potential.</td>
+                            </tr>
+                            <tr class="bg-brand-50/50">
+                                <td class="p-3 font-bold text-brand-600">Tier 3</td>
+                                <td class="p-3 font-medium text-brand-700">20,000 to 49,999</td>
+                                <td class="p-3 font-medium text-brand-700">Rapidly urbanizing, low cost, expanding digital consumer base, significant untapped room.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">Tier 4-6</td>
+                                <td class="p-3">Below 20,000 (Down to <5,000)</td>
+                                <td class="p-3">Semi-urban and rural markets, agricultural trade, nascent formal services.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-4">
+                <h2 class="text-2xl font-bold text-navy-800">Tier Dynamics & Cost Arbitrage Matrix</h2>
+                <p class="text-stone-600 text-sm">
+                    This section compares key operational and economic indicators across city tiers. The data underscores the massive cost advantage and accelerating digital growth that make Tier 3 cities prime targets for scalable ventures.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-navy-800 text-base">Cost & Internet Growth Comparison</h3>
+                            <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded">Interactive Visual</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mb-4">
+                            Toggle options to visualize operational expenses, initial startup capital requirements, or internet growth rates across city tiers.
+                        </p>
+                    </div>
+                    
+                    <div class="chart-container my-auto">
+                        <canvas id="tierComparisonChart"></canvas>
+                    </div>
+
+                    <div class="flex justify-center space-x-2 mt-4">
+                        <button onclick="updateComparisonChart('rental')" id="btn-rental" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-500 text-white shadow-sm">Office Rental</button>
+                        <button onclick="updateComparisonChart('setup')" id="btn-setup" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-stone-600 hover:bg-stone-200">Startup Setup Cost</button>
+                        <button onclick="updateComparisonChart('internet')" id="btn-internet" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-stone-600 hover:bg-stone-200">Internet Growth (YoY)</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-navy-800 text-base mb-2">Comparative Factor Breakdown</h3>
+                        <p class="text-xs text-stone-500 mb-4">Summary of distinct strategic advantages inherent in Tier 3 markets relative to saturated metropolitan regions.</p>
+                    </div>
+                    
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-100">
+                            <div class="font-bold text-navy-800 text-xs uppercase tracking-wide">Property & Real Estate</div>
+                            <div class="text-stone-600 text-xs mt-1">Tier 3 commercial office rentals (₹20-40/sq ft) are up to 80% cheaper than Tier 1 metros (₹100-150/sq ft), dramatically lowering fixed overheads.</div>
+                        </div>
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-100">
+                            <div class="font-bold text-navy-800 text-xs uppercase tracking-wide">Capital Outlay & Payback</div>
+                            <div class="text-stone-600 text-xs mt-1">Average startup setup costs range between ₹1–1.5 Crore in Tier 3 versus ₹5–7 Crore in Tier 1. Franchise payback happens in 2-3 years vs 5+ years in metros.</div>
+                        </div>
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-100">
+                            <div class="font-bold text-navy-800 text-xs uppercase tracking-wide">Workforce & Retention</div>
+                            <div class="text-stone-600 text-xs mt-1">Low attrition, high loyalty, and cost-effective local talent pools augmented by reverse migration of experienced professionals seeking quality of life.</div>
+                        </div>
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-100">
+                            <div class="font-bold text-navy-800 text-xs uppercase tracking-wide">Competitive Intensity</div>
+                            <div class="text-stone-600 text-xs mt-1">Significantly lower market competition allows early movers to capture dominant market share in uncrowded sectors.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drivers" class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-4">
+                <h2 class="text-2xl font-bold text-navy-800">The Untapped Potential: Core Drivers of Growth</h2>
+                <p class="text-stone-600 text-sm">
+                    This section analyzes the multi-faceted catalysts—economic cost-arbitrage, expanding middle-class consumption, major infrastructure programs, policy reforms, and talent retention—that make non-metro India an attractive destination for capital.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-lg">💰</div>
+                    <h3 class="font-bold text-navy-800 text-base">Economic & Capital Efficiency</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                        Lower land prices, utility bills, and labor rates create a natural cost-arbitrage advantage. Businesses can achieve higher operating margins or pass savings on to price-sensitive regional consumers to rapidly gain market share.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-sage-500/10 text-sage-600 flex items-center justify-center font-bold text-lg">📱</div>
+                    <h3 class="font-bold text-navy-800 text-base">Digital Consumer Expansion</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                        Data consumption in Tier 3 cities is 30% higher than in metros. Rural and semi-urban internet users are projected to cross 504 million. Non-metro consumers account for >55% of all e-commerce orders and exhibit fast repeat-buying behaviors.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-navy-800/10 text-navy-800 flex items-center justify-center font-bold text-lg">👥</div>
+                    <h3 class="font-bold text-navy-800 text-base">Talent & Reverse Migration</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                        A surge in reverse migration post-remote work mainstreaming brings skilled technical talent back to hometowns. Upskilling initiatives, nano-certifications, and local universities further enrich a stable, lower-attrition talent base.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="font-bold text-navy-800 text-base">Government Infrastructure & Policy Enablers</h3>
+                        <p class="text-xs text-stone-500">Explore multi-billion rupee national programs systematically bridging non-metro connectivity gaps.</p>
+                    </div>
+                    <input type="text" id="govtSearch" onkeyup="filterGovtTable()" placeholder="Search scheme (e.g. Mudra, UDAN)..." class="text-xs px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-brand-500 w-full sm:w-64">
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-stone-600" id="govtTable">
+                        <thead class="bg-stone-100 text-navy-800 font-semibold uppercase">
+                            <tr>
+                                <th class="p-3 rounded-l-lg">Initiative</th>
+                                <th class="p-3">Primary Focus / Objective</th>
+                                <th class="p-3 rounded-r-lg">Tangible Progress & Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">Smart Cities Mission</td>
+                                <td class="p-3">Urban infrastructure, sustainability, and economic upgrades in 100 non-metro cities.</td>
+                                <td class="p-3 text-brand-700 font-medium">7,380 projects completed; ₹1,47,704 Cr total investment.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">AMRUT 2.0</td>
+                                <td class="p-3">Water security, sewage systems, and green spaces in 500 urban centers.</td>
+                                <td class="p-3 text-brand-700 font-medium">8,998 projects underway; ₹1,89,458 Cr outlay.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">PMMY (Mudra Scheme)</td>
+                                <td class="p-3">Collateral-free enterprise credit for small and micro businesses.</td>
+                                <td class="p-3 text-brand-700 font-medium">Loan ceiling raised to ₹20 Lakh in Union Budget 2024-25.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">UDAN Regional Aviation</td>
+                                <td class="p-3">Regional air travel and logistics connectivity for smaller cities.</td>
+                                <td class="p-3 text-brand-700 font-medium">Connected 88 cities with 618 routes; expanding to 120 new routes.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">UIDF Infrastructure Fund</td>
+                                <td class="p-3">Long-term affordable funding for sanitation, waste, and water delivery.</td>
+                                <td class="p-3 text-brand-700 font-medium">₹10,000 Cr annual pool operational since late 2024.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold text-navy-800">Digital India & DFCs</td>
+                                <td class="p-3">E-governance, digital payments, high-speed connectivity, and freight movement.</td>
+                                <td class="p-3 text-brand-700 font-medium">Data consumption 30% higher than metros; streamlined supply chains.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="opportunities" class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-4">
+                <h2 class="text-2xl font-bold text-navy-800">High-Potential Business Ideas Engine</h2>
+                <p class="text-stone-600 text-sm">
+                    This section details 12 curated business opportunities grouped by sector. Use the filters to explore essential local services, aspirational lifestyle ventures, or digital/resource-leveraged models tailored for Tier 3 towns.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pb-2">
+                <button onclick="filterIdeas('all')" class="filter-btn active px-4 py-2 text-xs font-bold rounded-xl bg-stone-100 text-stone-700 transition-all">All Sectors (12)</button>
+                <button onclick="filterIdeas('essential')" class="filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-stone-100 text-stone-700 transition-all">Essential Local Services</button>
+                <button onclick="filterIdeas('lifestyle')" class="filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-stone-100 text-stone-700 transition-all">Emerging Lifestyle & Health</button>
+                <button onclick="filterIdeas('tech-resource')" class="filter-btn px-4 py-2 text-xs font-bold rounded-xl bg-stone-100 text-stone-700 transition-all">Digital & Local Resource Models</button>
+            </div>
+
+            <div id="ideasContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm mt-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                    <div>
+                        <h3 class="font-bold text-navy-800 text-base">Capital Intensity vs Payback Velocity Analysis</h3>
+                        <p class="text-xs text-stone-500">Visualization of business models mapped by relative initial capital needed and estimated payback period in Tier 3 locations.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="businessMatrixChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-4">
+                <h2 class="text-2xl font-bold text-navy-800">Risk & Mitigation Framework</h2>
+                <p class="text-stone-600 text-sm">
+                    This section presents a clear strategic roadmap to address key operational bottlenecks including last-mile logistics, hyper-local marketing needs, skill gaps, and regulatory hurdles.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold">🚛</span>
+                        <h3 class="font-bold text-navy-800 text-base">1. Logistics & Infrastructure Gaps</h3>
+                    </div>
+                    <div class="text-xs text-stone-600 space-y-2">
+                        <p><strong>Challenge:</strong> Uneven municipal road networks, lack of Grade-A standardized warehousing stock, and expensive unorganized last-mile delivery.</p>
+                        <p class="p-2.5 bg-brand-50 text-brand-900 rounded-lg border border-brand-200">
+                            <strong>Mitigation:</strong> Partner with modern shipping aggregator platforms (e.g. Shiprocket), leverage regional UDAN air hubs, and build localized micro-fulfillment hubs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">📢</span>
+                        <h3 class="font-bold text-navy-800 text-base">2. Market Access & Localized Marketing</h3>
+                    </div>
+                    <div class="text-xs text-stone-600 space-y-2">
+                        <p><strong>Challenge:</strong> Generic metro marketing strategies fail; regional cultural nuances, vernacular content preferences, and deep community trust are paramount.</p>
+                        <p class="p-2.5 bg-brand-50 text-brand-900 rounded-lg border border-brand-200">
+                            <strong>Mitigation:</strong> Adopt hyper-local vernacular SEO, video content marketing, WhatsApp community networks, and on-ground local event sponsorships.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">🎓</span>
+                        <h3 class="font-bold text-navy-800 text-base">3. Talent Skill Gaps & Retention</h3>
+                    </div>
+                    <div class="text-xs text-stone-600 space-y-2">
+                        <p><strong>Challenge:</strong> Shortage of specialized technical skills and industry-ready graduates despite large labor pools.</p>
+                        <p class="p-2.5 bg-brand-50 text-brand-900 rounded-lg border border-brand-200">
+                            <strong>Mitigation:</strong> Implement 3-6 week nano-certifications, partner with local colleges, leverage NSDC/Skill India programs, and foster home-grown talent pipelines like Zoho.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">🏛️</span>
+                        <h3 class="font-bold text-navy-800 text-base">4. Capital & Regulatory Navigation</h3>
+                    </div>
+                    <div class="text-xs text-stone-600 space-y-2">
+                        <p><strong>Challenge:</strong> Fragmented access to venture capital and complex land title clarity / local municipal clearance procedures.</p>
+                        <p class="p-2.5 bg-brand-50 text-brand-900 rounded-lg border border-brand-200">
+                            <strong>Mitigation:</strong> Tap collateral-free Mudra PMMY funds (up to ₹20L), utilize state single-window portals (e.g., Nivesh Mitra), and opt for asset-light models initially.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="success-stories" class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-4">
+                <h2 class="text-2xl font-bold text-navy-800">Success Stories: Pioneering "Bharat" Models</h2>
+                <p class="text-stone-600 text-sm">
+                    This section showcases prominent companies and ventures built out of Tier 2, Tier 3, and non-metro towns, proving that category leadership can be achieved outside traditional metropolitan hubs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:border-brand-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-navy-800 text-lg">Zoho</h3>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">Tenkasi, TN</span>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Global SaaS leader created engineering offices in a quiet Tamil Nadu town. Hired and upskilled local youth, proving world-class tech can be built from non-metro rural ecosystems.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:border-brand-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-navy-800 text-lg">Minimalist</h3>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-100 text-blue-800">Indore, MP</span>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Science-backed skincare category leader built from Indore. Leveraged regional manufacturing cost advantages, lean supply chains, and direct-to-consumer digital channels.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:border-brand-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-navy-800 text-lg">Loom Solar</h3>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800">Faridabad, HR</span>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Capitalized on clean energy demand and power cuts in non-metros, achieving ₹25 Crore turnover in its very first year through online-assisted solar dealerships.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:border-brand-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-navy-800 text-lg">Red Chief</h3>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-100 text-purple-800">Kanpur, UP</span>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Bootstrapped footwear brand starting from Kanpur, scaling into a nationally recognized multi-state footwear power house through localized distribution.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:border-brand-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-navy-800 text-lg">CityMall & DealShare</h3>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-brand-100 text-brand-800">Multi-Tier 3</span>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Pioneered community leader-led group buying models via WhatsApp, cracking the code of middle-income e-commerce in non-metro towns.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:border-brand-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-navy-800 text-lg">Yewale Amruttulya</h3>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-stone-100 text-stone-800">Maharashtra</span>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Standardized low-cost beverage franchise model that expanded rapidly across small towns, demonstrating high volume and fast payback.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="bg-stone-900 text-white rounded-3xl p-8 md:p-12 shadow-xl space-y-8">
+            <div class="max-w-2xl space-y-2">
+                <span class="text-xs font-bold text-brand-500 uppercase tracking-widest">Interactive Assessment Tool</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold">Venture Suitability Calculator</h2>
+                <p class="text-stone-400 text-xs md:text-sm">
+                    Select your planned investment budget and primary focus area to receive tailored business model recommendations and risk profile estimates for Tier 3 cities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-stone-300">Target Budget Range</label>
+                    <select id="calcBudget" class="w-full bg-slate-900 text-white border border-slate-700 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-500">
+                        <option value="low">Under ₹10 Lakhs (Micro/Low Capital)</option>
+                        <option value="medium">₹10 Lakhs - ₹50 Lakhs (Moderate Capital)</option>
+                        <option value="high">Above ₹50 Lakhs (High Capital / Manufacturing)</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-stone-300">Core Domain Preference</label>
+                    <select id="calcDomain" class="w-full bg-slate-900 text-white border border-slate-700 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-500">
+                        <option value="services">Local Essential Services</option>
+                        <option value="lifestyle">Health & Education Lifestyle</option>
+                        <option value="tech">Digital & Supply Chain Models</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-xs font-bold text-stone-300">Execution Preference</label>
+                    <select id="calcRisk" class="w-full bg-slate-900 text-white border border-slate-700 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-500">
+                        <option value="independent">Independent Founder Setup</option>
+                        <option value="franchise">Proven Franchise Model</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="calculateVenture()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-xl transition-all text-sm shadow-md">
+                Generate Custom Strategic Recommendation
+            </button>
+
+            <div id="calcResult" class="hidden bg-slate-800/90 border border-brand-500/50 p-6 rounded-2xl space-y-4">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-navy-900 text-stone-400 py-12 border-t border-slate-800 mt-16 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="space-y-2 text-center md:text-left">
+                <div class="text-lg font-black text-white">BHARATSCOPE Intelligence</div>
+                <p class="text-stone-400">Strategic Analysis Portal for India's Emerging Tier 3 Markets.</p>
+            </div>
+            <div class="text-center md:text-right text-stone-400">
+                Designed based on comprehensive analysis of infrastructure, government initiatives, and demographic shifts.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ideasData = [
+            {
+                title: "Laundry & Dry Cleaning Services",
+                category: "essential",
+                rationale: "High demand driven by busy lifestyles; organized reliable alternatives are sparse, offering high profit margins.",
+                audience: "Working professionals, students, nuclear families.",
+                successFactors: "Quality service, automated equipment, digital booking, pickup & drop off.",
+                capital: "Moderate",
+                payback: "18-24 mos"
+            },
+            {
+                title: "Cloud Kitchens & Tiffin Services",
+                category: "essential",
+                rationale: "Eliminates high metro real estate rents; taps into Swiggy/Zomato expansion in smaller towns.",
+                audience: "Migrant students, office workers, health-conscious buyers.",
+                successFactors: "Strict hygiene, authentic regional menu, speed of delivery, online presence.",
+                capital: "Low",
+                payback: "12-18 mos"
+            },
+            {
+                title: "Digitized Kirana & Grocery",
+                category: "essential",
+                rationale: "Stable daily demand transformed via digital payments (UPI) and localized home delivery integration.",
+                audience: "All local households.",
+                successFactors: "Sourcing local produce, competitive pricing, WhatsApp ordering, loyalty perks.",
+                capital: "Moderate",
+                payback: "12-24 mos"
+            },
+            {
+                title: "Mobile Device Repair & Accessories",
+                category: "essential",
+                rationale: "Data consumption in Tier 3 is 30% higher than metros; reliable smartphone technical repair centers are lacking.",
+                audience: "Youth, mobile users, local business owners.",
+                successFactors: "Technical expertise, quick turnaround, genuine replacement parts.",
+                capital: "Low",
+                payback: "6-12 mos"
+            },
+            {
+                title: "Coaching Centers & Hybrid Learning",
+                category: "lifestyle",
+                rationale: "Universal demand for quality education and competitive exam coaching lacking local top-tier faculty.",
+                audience: "K-12 students, competitive exam candidates, job seekers.",
+                successFactors: "Quality instructors, blended digital content, localized test series.",
+                capital: "Moderate",
+                payback: "12-18 mos"
+            },
+            {
+                title: "Health Clubs, Gyms & Wellness",
+                category: "lifestyle",
+                rationale: "Rising wellness consciousness across non-metros; lack of modern equipped fitness facilities.",
+                audience: "Youth, working adults, health-conscious individuals.",
+                successFactors: "Affordable memberships, clean facilities, personal trainers, Group classes.",
+                capital: "Moderate to High",
+                payback: "24-36 mos"
+            },
+            {
+                title: "Solar Product Dealership & Installation",
+                category: "lifestyle",
+                rationale: "Frequent power cuts, rising electricity tariffs, and generous central/state government subsidies.",
+                audience: "Residential homes, small factories, commercial shops, agricultural farms.",
+                successFactors: "After-sales maintenance, guiding clients through govt subsidies, installation quality.",
+                capital: "Moderate",
+                payback: "18-24 mos"
+            },
+            {
+                title: "Automobile Care & Eco Wash",
+                category: "lifestyle",
+                rationale: "Rapidly expanding vehicle ownership in smaller towns without professional wash and repair networks.",
+                audience: "Car and bike owners.",
+                successFactors: "Doorstep cleaning, water-saving pressure wash equipment, oil change packages.",
+                capital: "Low to Moderate",
+                payback: "12-18 mos"
+            },
+            {
+                title: "Organic Farming & Dairy Processing",
+                category: "tech-resource",
+                rationale: "Abundant local land and livestock coupled with growing urban demand for unadulterated organic food.",
+                audience: "Health-conscious urban households, local supermarkets, direct subscribers.",
+                successFactors: "Quality certifications, subscription delivery apps, direct-to-consumer branding.",
+                capital: "Moderate",
+                payback: "24-36 mos"
+            },
+            {
+                title: "Small-Scale Regional Manufacturing",
+                category: "tech-resource",
+                rationale: "51%+ of MSMEs are non-metro based. Lower labor and operational costs create high cost-arbitrage.",
+                audience: "Regional distributors, metro retail brands.",
+                successFactors: "Efficient raw material procurement, local labor management, quality packaging.",
+                capital: "High",
+                payback: "24-48 mos"
+            },
+            {
+                title: "E-Commerce Reselling & Dropshipping",
+                category: "tech-resource",
+                rationale: "Zero inventory requirement leveraging platforms like Meesho/Amazon and high regional social media usage.",
+                audience: "Local fashion, home decor, and handicraft consumers.",
+                successFactors: "Hyper-local social media marketing, vernacular customer service.",
+                capital: "Very Low",
+                payback: "1-6 mos"
+            },
+            {
+                title: "Affordable Franchise Outlets",
+                category: "tech-resource",
+                rationale: "Lower upfront setup cost (₹50L-1Cr vs ₹5Cr metro) with immediate consumer brand recognition.",
+                audience: "Aspirational youth and families.",
+                successFactors: "Prime location choice, adherence to franchisor operational standards.",
+                capital: "Moderate to High",
+                payback: "24-36 mos"
+            }
+        ];
+
+        function renderIdeas(filterCategory) {
+            const container = document.getElementById('ideasContainer');
+            container.innerHTML = '';
+
+            const filtered = filterCategory === 'all' 
+                ? ideasData 
+                : ideasData.filter(item => item.category === filterCategory);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4";
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-50 text-brand-700 border border-brand-200">
+                                ${item.category === 'essential' ? 'Essential Service' : item.category === 'lifestyle' ? 'Lifestyle & Health' : 'Tech & Resource'}
+                            </span>
+                            <span class="text-xs font-semibold text-stone-500">Payback: ${item.payback}</span>
+                        </div>
+                        <h3 class="font-bold text-navy-800 text-base leading-snug">${item.title}</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed">${item.rationale}</p>
+                    </div>
+
+                    <div class="space-y-2 pt-3 border-t border-stone-100 text-xs">
+                        <div>
+                            <span class="font-bold text-navy-800">Target Audience:</span>
+                            <span class="text-stone-600">${item.audience}</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-navy-800">Key Success Factor:</span>
+                            <span class="text-stone-600">${item.successFactors}</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-1 text-[11px] font-semibold text-stone-500">
+                            <span>Capital: ${item.capital}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterIdeas(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderIdeas(category);
+        }
+
+        function filterGovtTable() {
+            const input = document.getElementById("govtSearch").value.toUpperCase();
+            const table = document.getElementById("govtTable");
+            const tr = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName("td")[0];
+                let td2 = tr[i].getElementsByTagName("td")[1];
+                if (td || td2) {
+                    let txtValue = td.textContent || td.innerText;
+                    let txtValue2 = td2.textContent || td2.innerText;
+                    if (txtValue.toUpperCase().indexOf(input) > -1 || txtValue2.toUpperCase().indexOf(input) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        let tierChart;
+        const tierChartData = {
+            rental: {
+                label: 'Office Rental Cost (₹ per sq ft / month)',
+                data: [125, 55, 30],
+                colors: ['#0f172a', '#4e7d63', '#c2593f']
+            },
+            setup: {
+                label: 'Average Startup Setup Capital (₹ Crores)',
+                data: [6.0, 2.5, 1.25],
+                colors: ['#0f172a', '#4e7d63', '#c2593f']
+            },
+            internet: {
+                label: 'Internet Penetration Growth Rate (% YoY)',
+                data: [6, 11, 15],
+                colors: ['#0f172a', '#4e7d63', '#c2593f']
+            }
+        };
+
+        function initTierChart() {
+            const ctx = document.getElementById('tierComparisonChart').getContext('2d');
+            tierChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Tier 1 Metros', 'Tier 2 Cities', 'Tier 3 Cities'],
+                    datasets: [{
+                        label: tierChartData.rental.label,
+                        data: tierChartData.rental.data,
+                        backgroundColor: tierChartData.rental.colors,
+                        borderRadius: 8,
+                        barThickness: 32
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.raw}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { family: 'Plus Jakarta Sans', size: 11 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: 'Plus Jakarta Sans', size: 12, weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateComparisonChart(metric) {
+            ['rental', 'setup', 'internet'].forEach(m => {
+                const btn = document.getElementById(`btn-${m}`);
+                if (m === metric) {
+                    btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-500 text-white shadow-sm";
+                } else {
+                    btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-stone-600 hover:bg-stone-200";
+                }
+            });
+
+            const selected = tierChartData[metric];
+            tierChart.data.datasets[0].label = selected.label;
+            tierChart.data.datasets[0].data = selected.data;
+            tierChart.update();
+        }
+
+        function initMatrixChart() {
+            const ctx = document.getElementById('businessMatrixChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bubble',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Cloud Kitchens',
+                            data: [{ x: 15, y: 12, r: 12 }],
+                            backgroundColor: 'rgba(194, 89, 63, 0.7)'
+                        },
+                        {
+                            label: 'Mobile Repair',
+                            data: [{ x: 10, y: 9, r: 10 }],
+                            backgroundColor: 'rgba(78, 125, 99, 0.7)'
+                        },
+                        {
+                            label: 'Solar Dealership',
+                            data: [{ x: 40, y: 20, r: 16 }],
+                            backgroundColor: 'rgba(30, 41, 59, 0.7)'
+                        },
+                        {
+                            label: 'Laundry Chain',
+                            data: [{ x: 30, y: 18, r: 14 }],
+                            backgroundColor: 'rgba(194, 89, 63, 0.7)'
+                        },
+                        {
+                            label: 'Gym & Fitness',
+                            data: [{ x: 50, y: 30, r: 18 }],
+                            backgroundColor: 'rgba(78, 125, 99, 0.7)'
+                        },
+                        {
+                            label: 'Small Manufacturing',
+                            data: [{ x: 85, y: 36, r: 22 }],
+                            backgroundColor: 'rgba(30, 41, 59, 0.7)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { font: { family: 'Plus Jakarta Sans', size: 11 } }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: Setup Intensity ${context.raw.x}%, Payback ${context.raw.y} months`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Capital Intensity (%)', font: { size: 11, weight: 'bold' } },
+                            min: 0,
+                            max: 100,
+                            grid: { color: '#f1f5f9' }
+                        },
+                        y: {
+                            title: { display: true, text: 'Estimated Payback (Months)', font: { size: 11, weight: 'bold' } },
+                            min: 0,
+                            max: 42,
+                            grid: { color: '#f1f5f9' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function calculateVenture() {
+            const budget = document.getElementById('calcBudget').value;
+            const domain = document.getElementById('calcDomain').value;
+            const risk = document.getElementById('calcRisk').value;
+            const resultDiv = document.getElementById('calcResult');
+
+            let title = "";
+            let rationale = "";
+            let payback = "";
+            let governmentScheme = "";
+
+            if (budget === 'low') {
+                if (domain === 'services') {
+                    title = "Cloud Kitchen / Tiffin Network or Mobile Repair Unit";
+                    rationale = "Low upfront Capex paired with immediate cash flow from local daily demand.";
+                    payback = "6 - 12 Months";
+                    governmentScheme = "PMMY Mudra Shishu/Kishor Loan (Up to ₹5 Lakhs)";
+                } else if (domain === 'lifestyle') {
+                    title = "Hybrid Tutoring Center or Doorstep Auto Detailer";
+                    rationale = "Low facility overheads leveraging digital platforms and vernacular marketing.";
+                    payback = "12 - 18 Months";
+                    governmentScheme = "Skill India / NSDC local incubation center partnership";
+                } else {
+                    title = "E-Commerce Reselling or Dropshipping Hub";
+                    rationale = "Zero inventory overhead utilizing platforms like Meesho and social media.";
+                    payback = "1 - 6 Months";
+                    governmentScheme = "Digital India MSME e-commerce onboarding programs";
+                }
+            } else if (budget === 'medium') {
+                if (domain === 'services') {
+                    title = "Automated Laundry & Steam Ironing Service or Tech Kirana";
+                    rationale = "Capitalizes on expanding disposable incomes seeking modern conveniences.";
+                    payback = "18 - 24 Months";
+                    governmentScheme = "PMMY Tarun Loan (Up to ₹20 Lakhs)";
+                } else if (domain === 'lifestyle') {
+                    title = "Solar Equipment Franchise or Modern Wellness Gym";
+                    rationale = "Rides the clean energy wave and growing lifestyle consciousness in non-metros.";
+                    payback = "18 - 30 Months";
+                    governmentScheme = "Central/State Solar Subsidies & PM-KUSUM linkage";
+                } else {
+                    title = "Organic Dairy & Food Processing Brand";
+                    rationale = "Taps direct consumer subscriptions and local supermarket distribution.";
+                    payback = "24 - 36 Months";
+                    governmentScheme = "Agricultural Infrastructure Fund & Organic Farming Grants";
+                }
+            } else {
+                title = risk === 'franchise' ? "Multi-Unit QSR / Retail Franchise Outlet" : "Small-Scale Regional Manufacturing Unit";
+                rationale = "Leverages low industrial rentals and local labor cost arbitrage to serve regional markets.";
+                payback = "24 - 42 Months";
+                governmentScheme = "Urban Infrastructure Fund (UIDF) & Industrial Corridor Incentives";
+            }
+
+            resultDiv.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Recommended Venture Archetype</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-700 text-stone-300 font-bold">Est. Payback: ${payback}</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white">${title}</h3>
+                    <p class="text-xs text-stone-300 leading-relaxed">${rationale}</p>
+                    <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-700 space-y-1 text-xs">
+                        <span class="font-bold text-brand-400">Recommended Policy Lever:</span>
+                        <p class="text-stone-300">${governmentScheme}</p>
+                    </div>
+                </div>
+            `;
+            resultDiv.classList.remove('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderIdeas('all');
+            initTierChart();
+            initMatrixChart();
+        });
+    </script>
+</body>
+</html>  load entire repository
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
